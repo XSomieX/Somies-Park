@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Three.js</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="splash-screen">
+    <button id="enter-btn">ENTER PARK!</button>
+    <p>~ Use W,A,S,D or arrow keys to move ~</p>
+  </div>
+  <div id="ui-controls">
+    <button id="music-toggle" class="icon-btn mute"></button>
+    <button id="theme-toggle" class="icon-btn theme"></button>
+  </div>
+
+<audio id="click-sound" src="./Audios/ButtonClick.mp3"></audio>
+<div id="mobile-controls" class="hidden">
+    <button class="mobile-arrow" data-dir="up">▲</button>
+    
+    <div class="side-buttons">
+        <button class="mobile-arrow" data-dir="left">◀</button>
+        <button class="mobile-arrow" data-dir="right">▶</button>
+    </div> 
+    <button class="mobile-arrow" data-dir="down">▼</button>
+</div>
+  <div id="experience">
+    <canvas id="experience-canvas"></canvas>
+  </div>
+  <div class="modal hidden">
+    <div class="modal-wrapper">
+      <div class="modal-header">
+        <h1 class="modal-title">Project One</h1>
+        <button class="modal-exit-button">exit</button>
+      </div>
+      <div class="modal-content">
+       <div class="modal-content-wrapper">
+         <div class="modal-project-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Dignissimos fuga magni aut fugiat reiciendis.
+        </div>
+            <a href="#"
+               rel="noopener noreferrer"
+               class="modal-project-visit-button hidden">
+             View Project
+           </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+  <audio id="hop-sound" src="./Audios/JumpingSound.mp3"></audio>
+  <audio id="bg-music" src="./Audios/LittleRootTown.mp3" loop></audio>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.149.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script type="module" src="./main.js"></script>
+
+</body>
+</html>
+
