@@ -407,10 +407,12 @@ function movePlayer(direction) {
 }
 
 document.querySelectorAll("#mobile-controls button").forEach(btn => {
-    btn.addEventListener("touchstart", e => {
-        e.preventDefault();
-        movePlayer(btn.dataset.dir);
+  ["touchstart", "mousedown"].forEach(evt => {
+    btn.addEventListener(evt, e => {
+      e.preventDefault();
+      movePlayer(btn.dataset.dir);
     });
+  });
 });
 
 window.addEventListener("keydown", onKeyDown)
