@@ -230,6 +230,7 @@
     align-items: center;
     gap: 8px;
     z-index: 1200;
+    touch-action: none;
 }
 
 @media (max-width: 768px) {
