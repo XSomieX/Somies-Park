@@ -12,7 +12,7 @@ const musicToggle = document.getElementById("music-toggle")
 
 clickSound.volume = 0.2;
 const hopSound = document.getElementById("hop-sound");
-hopSound.volume = 0.3;
+hopSound.volume = 0.4;
 
 function playClick() {
     clickSound.currentTime = 0
@@ -503,3 +503,4 @@ window.addEventListener("resize", () => {
 
 
 renderer.setAnimationLoop(animate)
+
